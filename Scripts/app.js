@@ -20,18 +20,18 @@
 
         MainParagraph.setAttribute("id", "Main Paragraph");
         MainParagraph.setAttribute("class", "nt-3");
-        MainParagraph.textContent = "This is the frist paragragh";
+        MainParagraph.textContent = "This is the Main Paragraph!";
         MainContent.appendChild(MainParagraph);
 
         let FirstString = "This is";
-        let SecondString = `${FirstString} the main paragraph`;
+        let SecondString = `${FirstString} the Main paragraph`;
         MainParagraph.textContent = SecondString;
         MainContent.appendChild(MainParagraph);
 
         let DocumentBody = document.body;
 
         let article = document.createElement("article");
-        let ArticleParagraph =`<p id ="ArticleParagraph" class="mt-3">This is my article paragrpgh</p>`;
+        let ArticleParagraph =`<p id ="ArticleParagraph" class="mt-3">This is my article Paragraph</p>`;
 
         article.setAttribute("class", "container");
         article.innerHTML = ArticleParagraph;
