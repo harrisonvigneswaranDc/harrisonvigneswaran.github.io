@@ -1,0 +1,310 @@
+/*
+    app.css
+    Web Development Client Side Scripting INFT2202-02 13964
+    Durham College
+    Sergio Santilli
+    Muhammad Anwar & Harrison Vigneswaran
+    January 27, 2024
+*/
+
+/* Resetting default styles and setting up the body */
+body {
+    background-color: #ffff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Styling for a specific text element with centerText id */
+#centerText {
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
+/* Styles for the slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    max-height: 500px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Styles for individual slides in the slideshow */
+.mySlides {
+    display: none;
+}
+
+/* Styles for images within the slideshow */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fade animation for slideshow transitions */
+.fade {
+    animation: fade;
+    animation-duration: 20s;
+}
+
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+/* Styles for slideshow navigation controls */
+.slideshow-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+/* Styles for the main content container */
+main {
+    position: relative;
+    z-index: 3;
+    padding-top: 50px;
+}
+
+/* Styles for a general container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for project cards */
+.project-card {
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+}
+
+/* Styles for images within project cards */
+.project-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+/* Styles for the content within project cards */
+.project-card-content {
+    padding: 15px;
+}
+
+/* Styles for the "Load More" button */
+#loadMoreBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Team Section Styles Below */
+
+.team-section {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    height: 100%;
+}
+
+/* Styles for headings and paragraphs in team section */
+h3, p {
+    text-align: left;
+    line-height: normal;
+    overflow: hidden;
+}
+
+/* Styles for individual team members */
+.team-member {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Styles for team member images */
+.team-image {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    margin: 100px 40px 40px 100px;
+}
+
+/* Adjust positions of individual team members in the modal */
+#muhammadModal .modal-body img,
+#harrisonModal .modal-body img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Styles for the modal popup */
+.modal-body img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* General Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Styles for modal content */
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for images within the modal */
+.modal img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Styles for the close button in the modal */
+.close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Animation for modal */
+.fade {
+    animation: fade 0.3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Blog Section Styles Below */
+
+/* Main container styles for the blog section */
+#MainContainer {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ffff;
+    padding: 0;
+}
+
+/* Hover styles for anchor tags */
+a:hover {
+    color: #8aea92;
+    text-decoration: none;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    margin: 10px;
+    background-color: mediumpurple;
+}
+
+/* Styles for table headers */
+th {
+    font-weight: bolder;
+    font-style: normal;
+    padding: 5px;
+}
+
+/* Styles for table rows and cells */
+tr, td {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Header container styles */
+#HeaderContainer {
+    background-color: #33202a;
+    color: black;
+    padding: 10px;
+}
+
+/* Header styles specifically for h1 */
+#HeaderContainer h1 {
+    margin: 0;
+    text-align: center;
+}
+
+/* Blog class styles for various elements within the body */
+.blog {
+    margin: 15px;
+    text-align: justify;
+}
+
+/* Blog styles specifically for headings */
+.blog h1, h2, h3 {
+    padding: 10px;
+    font-style: normal;
+}
+
+/* Blog styles specifically for h1 */
+.blog h1 {
+    text-align: center;
+}
+
+/* Blog styles specifically for paragraphs */
+.blog p {
+    text-indent: 5em;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* Blog styles specifically for images */
+.blog img {
+    padding: 10px;
+    margin: auto;
+    width: 400px;
+    display: block;
+}
