@@ -1,10 +1,27 @@
+<!--
+    contact.html
+    Web Development Client Side Scripting INFT2202-02 13964
+    Durham College
+    Sergio Santilli
+    Muhammad Anwar & Harrison Vigneswaran
+    January 27, 2024
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="muhammad anwar, Harrison Vigneswaran">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" type="image/x-icon" href="./images/newspaper-regular.svg">
 
 
-
-   <title>Contact Me</title>
+   <title>Contact Page</title>
 
     <!-- CSS Section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -12,54 +29,142 @@
     <link rel="stylesheet" href="./content/app.css">
 </head>
 
+
+<!-- This would be the navigation bar -->
+<!-- This would be the links involving the HomePage,Portfolio, Services and Team -->
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><i class="fa-solid fa-building"></i> INFT 2202</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i>home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="product.html"><i class="fa-solid fa-microchip"></i> Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="service.html"><i class="fa-solid fa-bell-concierge"></i> Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"><i class="fa-solid fa-info"></i> About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contact.html"><i class="fa-solid fa-address-book"></i> Contact us</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav collapse navbar-collapse ms-auto mb-2 mb-lg-0" id="navbarSupportedContent">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fa-solid fa-people-group"> Harmony Hub</i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html"> Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html"> Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html"> Team</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="blog.html"> Blog</a>
+                </li>
+            </ul>
         </nav>
-
-
     </header>
 
+    <!-- This would be the Bottom navigation bar -->
+    <!-- This would be the links involving the Privacy-Policy, Terms-of-Service and Contact Us -->
 
-    <div class ="container">
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">More Information</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBottomSupportedContent" aria-controls="navbarBottomSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarBottomSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Privacy-Policy.html"> Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Terms-of-Service.html">Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
 
-        <h1 class="mb-5">About us</h1>
+                </ul>
 
-    </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- This would be the form that a user would submit to contact us -->
+    <!-- This would create the individual form types  -->
+    <!-- This would provide our information -->
+    <main class ="container">
+        <br>
+        <br>
+        <h1 class="mb-5">Contact us</h1>
+
+        <div class="row justify-content-lg-center g-3">
+            <header>
+                <p>Last updated: [2024-01-27]</p>
+            </header>
+
+            <section>
+                <h2>Need to get In Contact</h2>
+                <p>Need any Help? This page will help you inquire exactly what you need help with or feedback on how our community center is doing.
+                    We collect, use, disclose, and safeguard your personal information when you visit our website or use our
+                    services. By accessing or using our website, you consent to the terms of this Privacy Policy.</p>
+            </section>
+
+            <section>
+                <h2>Need to Contact Us</h2>
+                <UL>
+                    <LI>Email: infoinquire@harmony.com</LI>
+                    <LI>Phone: 124-456-7890</LI>
+                    <LI>Fax Phone: 124-456-7810</LI>
+                </UL>
+                <p>We may collect personally identifiable information, such as your name, email address, and phone number, when
+                    you voluntarily submit it to us through forms on our website.</p>
+
+            </section>
+        <form id="contactForm" class="col-lg-6 col-md-10 col-sm-10">
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Full Name</span>
+                <input id="FullName" name ="FullName" type="text" class="form-control" aria-describedby="Full Name" aria-label="Full name required" required>
+
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Contact Number</span>
+                <input id="ContactNumber" name ="ContactNumber" type="tel" class="form-control" aria-describedby="Contact Number" aria-label="Contact Number Input" required>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Your Email</span>
+                <input id="EmailAddress" name ="EmailAddress" type="email" class="form-control" aria-describedby="Email Address" aria-label="Email Address Input" required>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Your Message</span>
+                <input id="message" name ="message" type="tel" class="form-control" aria-describedby="Message Area" aria-label="Message Area Input" required>
+            </div>
+            <div class="input-group mb-3">
+                <input id ="subscribeCheckBox" name="subscribeCheckBox" type="checkbox" class="form-check-input">
+                <label class="form-check-label" for="subscribeCheckBox">  Confirm Information</label>
+            </div>
+            <button id="submit" type="submit" class ="btn btn-primary"><i class="fa-solid fa-envelope"></i> Submit</button>
+            <button id="cancel" type="reset"  class="btn btn-warning"><i class="fa-solid fa-rotate-left"></i> Cancel</button>
+        </form>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modalText"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
 
 
 <!== Scripting section -->
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="./Scripts/app.js"></script>
+    <script src="./Scripts/contact.js"></script>
+    <script src="./Scripts/contactus.js"></script>
+
+    <script src="Scripts/addtionalprojects.js"></script>
 </body>
 
 
