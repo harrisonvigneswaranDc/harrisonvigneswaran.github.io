@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a48e89-193e-4658-898d-21e805311275" name="Changes" comment="Officialy Excerise 2">
+    <list default="true" id="c5a48e89-193e-4658-898d-21e805311275" name="Changes" comment="official exercide 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
@@ -54,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708205033427</updated>
-      <workItem from="1708205034484" duration="856000" />
+      <workItem from="1708205034484" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="Officialy Excerise 2">
       <option name="closed" value="true" />
@@ -64,7 +65,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708205098971</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="official exercide 2">
+      <option name="closed" value="true" />
+      <created>1708205929836</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708205929836</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,6 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Officialy Excerise 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Officialy Excerise 2" />
+    <MESSAGE value="official exercide 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="official exercide 2" />
   </component>
 </project>
