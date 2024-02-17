@@ -34,8 +34,8 @@
         }
 
         toString() {
-            return `fullName ${this._fullName}\n
-            contactNumber ${this._contactNumber}\n EmailAddress ${this._emailAddress}`;
+            return `fullName ${this.fullName}\n
+            contactNumber ${this.contactNumber}\n EmailAddress ${this.emailAddress}`;
         }
 
 
@@ -44,7 +44,7 @@
          **/
         serialize() {
             if (this.fullName !== "" && this.contactNumber !== "" && this.emailAddress !== "") {
-                return `${this._fullName}.${this._contactNumber}.${this._emailAddress}`;
+                return `${this.fullName}.${this.contactNumber}.${this.emailAddress}`;
             }
             console.error("One or more of the contact properties are missing or invalid");
             return null;

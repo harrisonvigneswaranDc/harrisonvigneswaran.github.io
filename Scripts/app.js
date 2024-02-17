@@ -3,20 +3,9 @@
 // IIFE = Immediately Invoked Functional Expression
 (function(){
 
-    function CheckLogin(){
-        if (sessionStorage.getItem("user")){
-          $("#login").html(`<a id ="logout" class="nav-link" href="#"><i class="fa fa-sign-in-alt"> Logout</i></a>`)
-        }
-        $("#logout").on("click", function(){
-            sessionStorage.clear();
-            location.href= "login.html";
-        });
-    }
-
     function LoadHeader(html_data) {
         $("header").html(html_data);
         $(`li>a:contains(${document.title})`).addClass("active").attr("aria-current", "page");
-        CheckLogin();
 
 
 
@@ -53,9 +42,7 @@
 
     function ContactFormValidation() {
         // fullName
-        ValidateField("#fullName", /^([A-Z][a-zA-Z'’-]+)(\s[A-Z][a-zA-Z'’-]*)*(\s[A-Z][a-zA-Z'’-]+)$/, "Please Enter a Valid Full Name");
-
-
+        ValidateField("#fullName", /^([A-Z][a-z]{1,3}\\.?\\s)?([A-Z][a-z]+)+([\\s,-]([A-z][a-z]+))*$/, "Please Enter a Valid Full Name");
 
         //contactNumber
         ValidateField("#contactNumber", /^(\+\d{1,3}[\s-.])?\(?\d{3}\)?[\s-.]?\d{3}[\s-.]\d{4}$/, "Please Enter a Valid Contact Number");
@@ -63,7 +50,6 @@
         //emailAddress
         ValidateField("#emailAddress", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please Enter a Email Address");
     }
-
 
     /**
      * validate form field
@@ -157,7 +143,7 @@
                                 </button>                            
                             </td>
                             <td>
-                                <button value="${key}" class="btn btn-danger btn-sm delete">
+                                <button value="${key}" class="btn btn-danger btn-sm edit">
                                     <i class="fas fa-edit fa-sm"> Delete</i>
                                 </button> 
                             </td>
@@ -221,19 +207,19 @@
                 $("#emailAddress").val(contact._emailAddress);
 
 
-                $("#editButton").on("click", function () {
+                $(`#editButton`).on("click", function ()  {
                     event.preventDefault();
 
-                    contact._FullName = $("#fullName").val();
-                    contact._ContactNumber = $("#contactNumber").val();
-                    contact._EmailAddress = $("#emailAddress").val();
+                    contact._fullName = $("#fullName").val();
+                    contact._contactNumber = $("#contactNumber").val();
+                    contact._emailAddress = $("#emailAddress").val();
 
                     localStorage.setItem(page, contact.serialize());
                     location.href = "contact-list.html";
 
                 });
 
-                $("#cancelButton").on("click", function () {
+                $(`#cancelButton`).on("click", function () {
                     location.href = "contact-list.html";
                 });
 
@@ -246,7 +232,7 @@
 
         ContactFormValidation();
 
-        let sendButton = document.getElementById("sendButton");
+        let sendButton = document.getElementById("submit");
         let subscribeButton = document.getElementById("subscribeCheckbox");
 
         sendButton.addEventListener("click", function(){
@@ -258,46 +244,6 @@
 
     function DisplayLoginPage() {
         console.log("Called DisplayLoginPage()");
-
-        let messageArea  = $("#messageArea");
-        messageArea.hide();
-        $("#loginButton").on("click", function(){
-            let success= false;
-            let newUser = new core.User();
-
-            $.get("./data/users.json", function(data){
-
-                for(const user of data.users){
-                    // our request succeeded
-                    console.log(data.user);
-                    if(username.value === user.Username && password.value === user.Password){
-
-                        newUser.fromJSON(user);
-                        success =true;
-                        break;
-                    }
-                }
-                if(success){
-                    sessionStorage.setItem("user", newUser.serialize());
-                    messageArea.removeAttr("class").hide();
-                    location.href ="contact-list.html";
-
-                }else{
-                    $("#username").trigger("focus").trigger("select");
-                    messageArea
-                        .addClass("alert alert-danger")
-                        .text("Error: Invalid Credentials")
-                        .show();
-                }
-                $("#cancelButton").on("click", function(){
-
-                    document.forms[0].reset();
-                    location.href="index.html"
-
-                });
-            })
-
-        });
     }
 
     function DisplayRegisterPage() {
