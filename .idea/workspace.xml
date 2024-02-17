@@ -4,12 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fe4b4df-f6a6-421e-92ec-64cfcb18a64b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="7fe4b4df-f6a6-421e-92ec-64cfcb18a64b" name="Changes" comment="Exercise 2">
+      <change beforePath="$PROJECT_DIR$/.idea/harrisonvigneswaran.github.io.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/authguard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/user.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/JQuery.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/JQueryStatic.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/dist/jquery.slim.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/legacy.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/misc.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +48,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2cVhDp4PaxDO2pkvxdmoYSFCEN3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Harrison Vigneswaran/WebstormProjects/INFT2202-13964",
+    "last_opened_file_path": "C:/Users/Harrison Vigneswaran/WebstormProjects/harrisonvigneswaran.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,10 +80,24 @@
       <option name="presentableId" value="Default" />
       <updated>1708202538869</updated>
       <workItem from="1708202540219" duration="623000" />
+      <workItem from="1708203492975" duration="737000" />
     </task>
+    <task id="LOCAL-00001" summary="Exercise 2">
+      <option name="closed" value="true" />
+      <created>1708203517011</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708203517011</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Exercise 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 2" />
   </component>
 </project>

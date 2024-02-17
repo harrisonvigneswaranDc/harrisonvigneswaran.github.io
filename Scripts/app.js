@@ -3,59 +3,10 @@
 // IIFE = Immediately Invoked Functional Expression
 (function(){
 
-    function CheckLogin(){
-        if (sessionStorage.getItem("user")){
-          $("#login").html(`<a id ="logout" class="nav-link" href="#"><i class="fa fa-sign-in-alt"> Logout</i></a>`)
-        }
-        $("#logout").on("click", function(){
-            sessionStorage.clear();
-            location.href= "login.html";
-        });
-    }
-
-    function LoadHeader(html_data) {
-        $("header").html(html_data);
-        $(`li>a:contains(${document.title})`).addClass("active").attr("aria-current", "page");
-        CheckLogin();
-
-
-
-    }
-
-
-
-    function AjaxRequest(method, url, callback) {
-        // Step 1: Instantiate new XHR object
-        let xhr = new XMLHttpRequest();
-
-        // Step 2: Open XHR request
-        xhr.open(method, url);
-
-        // Step 4: Add even listener for the readystatechange event
-            // The readystatechange event is triggered when the state of a document being fetched changes
-        xhr.addEventListener("readystatechange", () => {
-            if(xhr.readyState === 4  && xhr.status === 200) {
-                if(typeof callback == "function"){
-                    callback(xhr.responseText);
-                }else {
-                    console.error("ERROR: callback not a function");
-                }
-            }
-
-        });
-        // Step 3: Send XHR Request
-        xhr.send();
-
-    }
-
-
-
 
     function ContactFormValidation() {
         // fullName
-        ValidateField("#fullName", /^([A-Z][a-zA-Z'’-]+)(\s[A-Z][a-zA-Z'’-]*)*(\s[A-Z][a-zA-Z'’-]+)$/, "Please Enter a Valid Full Name");
-
-
+        ValidateField("#fullName", /^([A-Z][a-z]{1,3}\\.?\\s)?([A-Z][a-z]+)+([\\s,-]([A-z][a-z]+))*$/, "Please Enter a Valid Full Name");
 
         //contactNumber
         ValidateField("#contactNumber", /^(\+\d{1,3}[\s-.])?\(?\d{3}\)?[\s-.]?\d{3}[\s-.]\d{4}$/, "Please Enter a Valid Contact Number");
@@ -64,13 +15,12 @@
         ValidateField("#emailAddress", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please Enter a Email Address");
     }
 
-
     /**
      * validate form field
      * @param input_field_id
      * @param regular_expression
      * @param error_message
-     * @constructor
+     *
      **/
 
 
@@ -98,7 +48,7 @@
      * @param fullName
      * @param contactNumber
      * @param emailAddress
-     * @constructor
+     *
      */
     function AddContact(fullName, contactNumber, emailAddress) {
         let contact = new core.Contact(fullName, contactNumber, emailAddress);
@@ -148,16 +98,16 @@
 
                 contact.deserialize(contactData);
                 data += `<tr><th scope="row" class="text-center">${index}</th>
-                            <td>${contact.fullName}</td>
-                            <td>${contact.contactNumber}</td>
-                            <td>${contact.emailAddress}</td>
+                            <td>${contact._fullName}</td>
+                            <td>${contact._contactNumber}</td>
+                            <td>${contact._emailAddress}</td>
                             <td class="text-center">
                                 <button value="${key}" class="btn btn-primary btn-sm edit">
                                     <i class="fas fa-edit fa-sm"> Edit</i>
                                 </button>                            
                             </td>
                             <td>
-                                <button value="${key}" class="btn btn-danger btn-sm delete">
+                                <button value="${key}" class="btn btn-danger btn-sm edit">
                                     <i class="fas fa-edit fa-sm"> Delete</i>
                                 </button> 
                             </td>
@@ -200,7 +150,7 @@
                 $("main>h1").text("Add Contact");
                 $("#addButton").html(`<i class="fas fa-plus-circle fa-sm" /> Add`);
 
-                $("#editButton").on("click", function () {
+                $("#editButton").om("click", function (fullName, contactNumber, emailAddress) {
                     event.preventDefault();
                     new AddContact(fullName.value, contactNumber.value, emailAddress.value);
                     location.href = "contact-list.html";
@@ -221,19 +171,19 @@
                 $("#emailAddress").val(contact._emailAddress);
 
 
-                $("#editButton").on("click", function () {
+                $(`#editButton`).on("click", function ()  {
                     event.preventDefault();
 
-                    contact._FullName = $("#fullName").val();
-                    contact._ContactNumber = $("#contactNumber").val();
-                    contact._EmailAddress = $("#emailAddress").val();
+                    contact._fullName = $("#fullName").val();
+                    contact._contactNumber = $("#contactNumber").val();
+                    contact._emailAddress = $("#emailAddress").val();
 
                     localStorage.setItem(page, contact.serialize());
                     location.href = "contact-list.html";
 
                 });
 
-                $("#cancelButton").on("click", function () {
+                $(`#cancelButton`).on("click", function () {
                     location.href = "contact-list.html";
                 });
 
@@ -244,9 +194,11 @@
     function DisplayContactPage(){
         console.log("Called DisplayContactPage()");
 
+        //TestFullName();
+
         ContactFormValidation();
 
-        let sendButton = document.getElementById("sendButton");
+        let sendButton = document.getElementById("submit");
         let subscribeButton = document.getElementById("subscribeCheckbox");
 
         sendButton.addEventListener("click", function(){
@@ -258,46 +210,6 @@
 
     function DisplayLoginPage() {
         console.log("Called DisplayLoginPage()");
-
-        let messageArea  = $("#messageArea");
-        messageArea.hide();
-        $("#loginButton").on("click", function(){
-            let success= false;
-            let newUser = new core.User();
-
-            $.get("./data/users.json", function(data){
-
-                for(const user of data.users){
-                    // our request succeeded
-                    console.log(data.user);
-                    if(username.value === user.Username && password.value === user.Password){
-
-                        newUser.fromJSON(user);
-                        success =true;
-                        break;
-                    }
-                }
-                if(success){
-                    sessionStorage.setItem("user", newUser.serialize());
-                    messageArea.removeAttr("class").hide();
-                    location.href ="contact-list.html";
-
-                }else{
-                    $("#username").trigger("focus").trigger("select");
-                    messageArea
-                        .addClass("alert alert-danger")
-                        .text("Error: Invalid Credentials")
-                        .show();
-                }
-                $("#cancelButton").on("click", function(){
-
-                    document.forms[0].reset();
-                    location.href="index.html"
-
-                });
-            })
-
-        });
     }
 
     function DisplayRegisterPage() {
@@ -306,9 +218,6 @@
 
     function Start(){
         console.log("App Started");
-
-        AjaxRequest("GET", "header.html", LoadHeader);
-
 
         switch(document.title){
             case "INFT 2202 - 13964":
