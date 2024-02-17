@@ -1,56 +1,66 @@
 "use strict";
 
-class Contact{
+(function (core) {
 
-    constructor(fullName = "", contactNumber = "" , emailAddresss="") {
-        this._fullName = fullName;
-        this._contactNumber = contactNumber;
-        this._emailAddresss = emailAddresss;
+    class Contact {
+        constructor(fullName = "", contactNumber = "", emailAddress = "") {
+            this.fullName = fullName;
+            this.contactNumber = contactNumber;
+            this.emailAddress = emailAddress;
+        }
+
+        get fullName() {
+            return this._fullName;
+        }
+
+        set fullName(value) {
+            this._fullName = value;
+        }
+
+        get contactNumber() {
+            return this._contactNumber;
+        }
+
+        set contactNumber(value) {
+            this._contactNumber = value;
+        }
+
+        get emailAddress() {
+            return this._emailAddress;
+        }
+
+        set emailAddress(value) {
+            this._emailAddress = value;
+        }
+
+        toString() {
+            return `fullName ${this._fullName}\n
+            contactNumber ${this._contactNumber}\n EmailAddress ${this._emailAddress}`;
+        }
 
 
+        /**
+         serialize for writing to localStorage
+         **/
+        serialize() {
+            if (this.fullName !== "" && this.contactNumber !== "" && this.emailAddress !== "") {
+                return `${this._fullName}.${this._contactNumber}.${this._emailAddress}`;
+            }
+            console.error("One or more of the contact properties are missing or invalid");
+            return null;
+        }
+
+        /**
+         Deserialized means to read data from localStorage
+         **/
+        deserialize(data) {
+            // Bruce Wayne, 555-5555, Bruce@Batman.com
+            let propertyArray = data.split(".");
+            this.fullName = propertyArray[0];
+            this.contactNumber = propertyArray[1];
+            this.emailAddress = propertyArray[2];
+        }
     }
-    get fullName() {
-        return this._fullName;
-    }
+    core.Contact = Contact;
 
-    set fullName(value) {
-        this._fullName = value;
-    }
-
-    get contactNumber() {
-        return this._contactNumber;
-    }
-
-    set contactNumber(value) {
-        this._contactNumber = value;
-    }
-
-    get emailAddresss() {
-        return this._emailAddresss;
-    }
-
-    set emailAddresss(value) {
-        this._emailAddresss = value;
-    }
-
-    toString(){
-        return `fullName ${this.fullName}\n
-        contactNumber ${this.contactNumber}\n EmailAddress${this.emailAddresss}`
-    }
-
-    serialize(){
-       if (this.fullName!== "" && this.contactNumber!== "" && this.emailAddresss !== "") {
-           return `${this.fullName}, ${this.contactNumber}, ${this.emailAddresss}`
-       }
-        console.error("Invalid");
-        return null;
-    }
-    deserialize(){
-
-        let propertyArray = data.split(",");
-        this._fullName = propertyArray[0];
-        this._contactNumber=propertyArray[1];
-        this._emailAddresss=propertyArray[2];
-    }
-
-}
+})(core || (core ={}));
