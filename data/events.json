@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "name": "Coding Camps",
+      "date": "2024-03-10",
+      "location": "Community Auditorium",
+      "description": "Enjoy a day as people of all ages can learn to code or get informed about the landscape"
+    },
+    {
+      "name": "Charity Movie",
+      "date": "2024-03-10",
+      "location": "Community Auditorium",
+      "description": "Enjoy a night where we marathon 'Hotel Transylvania' and raise money for youth development programs"
+    },
+    {
+      "name": "Community BBQ",
+      "date": "2024-04-31",
+      "location": "Whitbee Park",
+      "description": "Join us for a community BBQ where there will be vendors with tastes across the world, games and community fun"
+    },
+    {
+      "name": "Canada Day Celebrations",
+      "date": "2024-06-30",
+      "location": "Whitbee Park",
+      "description": "Enjoy a day as children and people of all ages listen to live music, play games try foods and celebrate Canada Day for 2 days"
+    }
+  ]
+}

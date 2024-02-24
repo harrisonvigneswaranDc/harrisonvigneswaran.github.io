@@ -3,10 +3,10 @@
 (function (core) {
 
     class Contact {
-        constructor(fullName = "", contactNumber = "", emailAddress = "") {
+        constructor(fullName = "", contactNumber = "", message = "") {
             this.fullName = fullName;
             this.contactNumber = contactNumber;
-            this.emailAddress = emailAddress;
+            this.message = message;
         }
 
         get fullName() {
@@ -25,17 +25,17 @@
             this._contactNumber = value;
         }
 
-        get emailAddress() {
-            return this._emailAddress;
+        get message() {
+            return this._message;
         }
 
-        set emailAddress(value) {
-            this._emailAddress = value;
+        set message(value) {
+            this._message = value;
         }
 
         toString() {
             return `fullName ${this._fullName}\n
-            contactNumber ${this._contactNumber}\n EmailAddress ${this._emailAddress}`;
+            contactNumber ${this._contactNumber}\n message ${this._message}`;
         }
 
 
@@ -43,8 +43,8 @@
          serialize for writing to localStorage
          **/
         serialize() {
-            if (this.fullName !== "" && this.contactNumber !== "" && this.emailAddress !== "") {
-                return `${this._fullName}.${this._contactNumber}.${this._emailAddress}`;
+            if (this.fullName !== "" && this.contactNumber !== "" && this.message !== "") {
+                return `${this._fullName}.${this._contactNumber}.${this._message}`;
             }
             console.error("One or more of the contact properties are missing or invalid");
             return null;
@@ -58,7 +58,7 @@
             let propertyArray = data.split(".");
             this.fullName = propertyArray[0];
             this.contactNumber = propertyArray[1];
-            this.emailAddress = propertyArray[2];
+            this.message = propertyArray[2];
         }
     }
     core.Contact = Contact;

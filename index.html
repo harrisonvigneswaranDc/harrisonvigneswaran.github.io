@@ -1,32 +1,101 @@
+<!--
+    index.html
+    Web Development Client Side Scripting INFT2202-02 13964
+    Durham College
+    Sergio Santilli
+    Muhammad Anwar & Harrison Vigneswaran
+    February 24, 2024
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="muhammad anwar">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Title and Favicon -->
+    <title>Harmony Hub</title>
+    <link rel="icon" type="image/x-icon" href="./images/peace-solid.svg">
 
-    <title>INFT 2202 - 13964</title>
 
     <!-- CSS Section -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="CSS/app.css">
     <link rel="stylesheet" href="content/app.css">
-
 </head>
 <body>
+<!-- Navigation -->
+<header>
 
 
-    <header></header>
+</header>
+
+<!-- This would be the Bottom navigation bar -->
+<!-- This would be the links involving the Privacy-Policy, Terms-of-Service and Contact Us -->
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">More Information</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBottomSupportedContent" aria-controls="navbarBottomSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarBottomSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="Privacy-Policy.html"> Privacy Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Terms-of-Service.html">Terms of Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
 
 
+    <!-- Main Content -->
     <main class="container">
-        <h1><i class="fa-solid fa-moon"></i> Welcome to Week 6</h1>
-        <button id="AboutUsBtn" class="btn btn-primary">About Us</button>
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides fade">
+                <img src="./images/harmony1.jpg" alt="Slide 1">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/harmony2.jpg" alt="Slide 2">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/harmony3.jpg" alt="Slide 3">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/harmony5.jpg" alt="Slide 4">
+            </div>
+        </div>
     </main>
+    <!-- Welcome Message -->
 
+    <div id="centerText">
+        <h1> Welcome!</h1>
+    </div>
 
+    <!-- Scripting Section -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
+<script src="./Scripts/contact.js"></script>
+<script src="./Scripts/contactus.js"></script>
 
-
-<!-- Scripting Section -->
-<script src="./node_modules/jquery/dist/jquery.min.js"></script>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="./Scripts/app.js"></script>
+<script src="Scripts/addtionalprojects.js"></script>
 </body>
 </html>

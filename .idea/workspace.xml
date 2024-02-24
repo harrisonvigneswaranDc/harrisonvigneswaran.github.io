@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a48e89-193e-4658-898d-21e805311275" name="Changes" comment="6">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/service.html" afterDir="false" />
-    </list>
+    <list default="true" id="dc2773d6-dd7b-4461-804c-bd37e647930d" name="Changes" comment="Assignment 1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,11 +13,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
-  <component name="ProjectId" id="2cVmHikvguEsbUP5bdOoxtO05EW" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/login.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2bYejle1kXF42YCZe6VoOtZy5S3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Harrison Vigneswaran/WebstormProjects/INFT2202-13964",
+    "last_opened_file_path": "D:/Semester 4/Web Development CSS/Assignment 2 By Harrison Muhammed/Scripts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -46,50 +39,47 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Semester 4\Web Development CSS\Assignment 2 By Harrison Muhammed\Scripts" />
+      <recent name="D:\Semester 4\Web Development CSS\Assignment 2 By Harrison Muhammed" />
+      <recent name="D:\Semester 4\Web Development CSS\Assignment1 BY Harrison Muhammed\data" />
+      <recent name="D:\Semester 4\Web Development CSS\Assignment1 BY Harrison Muhammed" />
+      <recent name="D:\Semester 4\Web Development CSS\Assignment1 BY Harrison Muhammed\ajax" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c5a48e89-193e-4658-898d-21e805311275" name="Changes" comment="" />
-      <created>1708205033427</created>
+      <changelist id="dc2773d6-dd7b-4461-804c-bd37e647930d" name="Changes" comment="" />
+      <created>1706396576369</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1708205033427</updated>
-      <workItem from="1708205034484" duration="2591000" />
+      <updated>1706396576369</updated>
+      <workItem from="1706396577426" duration="764000" />
+      <workItem from="1708465044629" duration="5903000" />
+      <workItem from="1708472353171" duration="219000" />
+      <workItem from="1708557034639" duration="22859000" />
+      <workItem from="1708719056020" duration="6827000" />
+      <workItem from="1708797997708" duration="3332000" />
+      <workItem from="1708803252720" duration="5821000" />
     </task>
-    <task id="LOCAL-00001" summary="Officialy Excerise 2">
+    <task id="LOCAL-00001" summary="Assignment 1">
       <option name="closed" value="true" />
-      <created>1708205098971</created>
+      <created>1706396624627</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1708205098971</updated>
+      <updated>1706396624627</updated>
     </task>
-    <task id="LOCAL-00002" summary="official exercide 2">
-      <option name="closed" value="true" />
-      <created>1708205929836</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1708205929836</updated>
-    </task>
-    <task id="LOCAL-00003" summary="6">
-      <option name="closed" value="true" />
-      <created>1708206750362</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1708206750362</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Officialy Excerise 2" />
-    <MESSAGE value="official exercide 2" />
-    <MESSAGE value="6" />
-    <option name="LAST_COMMIT_MESSAGE" value="6" />
+    <MESSAGE value="Assignment 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 1" />
   </component>
 </project>

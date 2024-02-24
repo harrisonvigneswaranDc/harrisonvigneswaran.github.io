@@ -1,3 +1,12 @@
+<!--
+    register.html
+    Web Development Client Side Scripting INFT2202-02 13964
+    Durham College
+    Sergio Santilli
+    Muhammad Anwar & Harrison Vigneswaran
+    February 23, 2024
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,82 +20,98 @@
 
 </head>
 <body>
+<header></header>
 
-    <header></header>
+<main class="container">
+    <br>
+    <br>
+    <h1><i class="fa-solid fa-clipboard-user"></i> Registration Portal</h1>
+    <br>
+    <br>
 
-<!-- Main Content -->
-<main class="container" id="mainContent">
-    <div class="row">
-        <div class="offset-md-3 col-md-6 col-sm-12">
-            <div class="login" id="contentArea">
-                <h1 class="display-4">Register</h1>
-                <form id="registerForm" novalidate>
-                    <p class="hint-text">Create your own account. It's free and only takes a minute.</p>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input class="form-control" type="text" name="firstName" id="FirstName" placeholder="First Name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" required>
-                            </div>
-                        </div>
-                    </div>
+    <div id="messageArea"></div>
 
 
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="email" class="form-control" id="emailAddress" name="emailAddress" required
-                                       value="" placeholder="Email">
-                            </div>
-                        </div>
+    <div class="row justify-content-lg-center g-3">
 
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="password" class="form-control" id="password" name="password"  required
-                                       value="" placeholder="Password">
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  required
-                                       value="" placeholder="Confirm Password">
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="text-right">
-                        <button id="submitButton" type="submit" class="btn btn-primary btn-lg">Register</button>
-                    </div>
-                </form>
-
+        <form class="col-lg-6 col-md-10 col-sm-10">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Username</span>
+                <input id="userName" name="userName" class="form-control" aria-describedby="Username Area" aria-label="Username Area Input" required>
             </div>
-            <p class="text-center text-muted small">
-                Already have an account?
-                <a href="login.html">Sign in</a>
-            </p>
-        </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Password</span>
+                <input id="password" name="password" class="form-control" aria-describedby="Password Area" aria-label="Password Area Input" required>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Full Name</span>
+                <input id="fullName" name="fullName" type="text" class="form-control" aria-describedby="Full Name" aria-label="Full Name Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Contact Number</span>
+                <input id="contactNumber" name="contactNumber" type="tel" class="form-control" aria-describedby="Contact Number" aria-label="Contact Number Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input id="emailAddress" name="emailAddress" type="email" class="form-control" aria-describedby="Email Address" aria-label="Email Address Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Your Address</span>
+                <input id="address" name="address" class="form-control" aria-describedby="Address Area" aria-label="Address Area Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <input id="subscribeCheckbox" name="subscribeCheckbox" type="checkbox" class="form-check-input">
+                <label class="form-check-label" for="subscribeCheckbox"> Click Here to Subscribe to our Newsletter</label>
+            </div>
+
+            <button id="sendButton" type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope-open"></i> Submit</button>
+            <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fa-solid fa-arrows-rotate"></i> Reset</button>
+
+        </form>
+
+
+
+
     </div>
 </main>
+<!-- This would be the Bottom navigation bar -->
+<!-- This would be the links involving the Privacy-Policy, Terms-of-Service and Contact Us -->
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">More Information</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBottomSupportedContent" aria-controls="navbarBottomSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarBottomSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="Privacy-Policy.html"> Privacy Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Terms-of-Service.html">Terms of Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
 
 
-    <!-- Scripting Section -->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./Scripts/namespace.js"></script>
-    <script src="./Scripts/contact.js"></script>
-    <script src="./Scripts/app.js"></script>
+<!-- Scripting Section -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./Scripts/namespace.js"></script>
+<script src="./Scripts/contact.js"></script>
+<script src="./Scripts/app.js"></script>
 
 </body>
 </html>
