@@ -466,7 +466,7 @@
 
         // API key and URL setup for the news API
         let apiKey = '3bb9d2ddcb064382b70b5495ba20a488';
-        let url = `http://newsapi.org/v2/top-headlines/sources?country=ca&apiKey=${apiKey}`;
+        let url = `https://newsapi.org/v2/top-headlines/sources?country=ca&apiKey=${apiKey}`;
 
         let xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
